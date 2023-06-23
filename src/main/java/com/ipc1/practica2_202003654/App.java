@@ -26,8 +26,6 @@ import models.Product;
  * JavaFX App
  */
 public class App extends Application {
-
-
     private static Scene scene;
     private static List<Product> productList;
     private static List<Order> ordersHistory;
@@ -96,7 +94,6 @@ public class App extends Application {
         }
     }
 
-    @SuppressWarnings("unchecked")
     private static List<Product> loadProductList() {
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(PRODUCT_FILE))) {
             return (List<Product>) inputStream.readObject();
@@ -271,5 +268,4 @@ public class App extends Application {
         }
         return false;
     }
-
 }
